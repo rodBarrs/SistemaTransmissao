@@ -14,16 +14,15 @@ try {
 	$stmt->bindParam(':senha', $senha, PDO::PARAM_STR);
 
 	$stmt->execute();
-	$result = $stmt->fetchAll();
+	$result = $stmt->fetch();
 
 	$stmt->closeCursor();
-	print_r(count($result));
-	// if (count($result)) {
-	// 	session_start();
-	// 	$_SESSION["emailUsuario"] = $email;
-	// }
+	if ($result[0] != 0) {
+		session_start();
+		$_SESSION["emailUsuario"] = $email;
+	}
 
-	// header('Location: ../index.php');
+	header('Location: ../index.php');
 } catch(PDOException $ex) {
 	echo "Error on validate: ".$ex->getMessage();
 }
