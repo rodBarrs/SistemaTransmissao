@@ -5,9 +5,9 @@ $nome = $_POST['nome'];
 $descricao = $_POST['descricao'];
 $imagem = $_POST['imagem'];
 $url_filme = $_POST['url_filme'];
-$catalogo_idcatalogo = $_POST['catalogo_idcatalogo'];
+$idfilme = $_POST['idfilme'];
 
-$query = "CALL cadastrarFilme(:nome, :descricao, :imagem, :url_filme, :catalogo_idcatalogo)";
+$query = "CALL cadastrarFilme(:nome, :descricao, :imagem, :url_filme, :idfilme)";
 
 $stmt = $pdo->prepare($sql);
 
@@ -15,7 +15,7 @@ $stmt->bindParam(':nome', $nome, PDO::PARAM_STR);
 $stmt->bindParam(':descricao', $descricao, PDO::PARAM_STR);
 $stmt->bindParam(':imagem', $imagem, PDO::PARAM_STR);
 $stmt->bindParam(':url_filme', $url_filme, PDO::PARAM_STR);
-$stmt->bindParam(':catalogo_idcatalogo', $catalogo_idcatalogo, PDO::PARAM_INT);
+$stmt->bindParam(':idfilme', $idfilme, PDO::PARAM_INT);
 
 $stmt->execute();
 
