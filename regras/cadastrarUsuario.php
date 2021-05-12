@@ -6,15 +6,15 @@ $email = $_POST["email"];
 $senha = $_POST["password"];
 $senha = md5($senha);
 
-// $query = "CALL cadastrarUsuario(:nome, :email, :senha)";
-$query = "insert into usuario (nome, email, senha)
-values ('nome', 'email', 'senha');";
+$query = "CALL cadastrarUsuario(:nome, :email, :senha)";
+// $query = "insert into usuario (nome, email, senha)
+// values ('nome', 'email', 'senha');";
 
 $stmt = $conexao->prepare($query);
 
-$stmt->bindParam(':nome', $nome, PDO::PARAM_STR, 100);
-$stmt->bindParam(':email', $email, PDO::PARAM_STR, 100);
-$stmt->bindParam(':senha', $senha, PDO::PARAM_STR, 100);
+$stmt->bindParam(':nome', $nome);
+$stmt->bindParam(':email', $email);
+$stmt->bindParam(':senha', $senha);
 
 $stmt->execute();
 
