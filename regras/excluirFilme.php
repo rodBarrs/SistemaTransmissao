@@ -13,5 +13,5 @@ $stmt->execute();
 
 $stmt->closeCursor();
 
-header('Location: ../telas/home.html');
+header('Location: ../index.php');
 ?>

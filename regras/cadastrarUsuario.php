@@ -18,5 +18,8 @@ $stmt->execute();
 
 $stmt->closeCursor();
 
-header('Location: ../telas/login.html');
+session_start();
+$_SESSION["emailUsuario"] = $email;
+
+header('Location: ../index.php');
 ?>

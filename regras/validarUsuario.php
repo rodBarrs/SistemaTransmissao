@@ -5,21 +5,22 @@ try {
 	$email = $_POST["email"];
 	$senha = $_POST["password"];
 
-	$query = "SELECT cadastrarUsuario(:email, :senha)";
+	$query = "SELECT validarUsuario(:email, :senha)";
 
 	$stmt = $conexao->prepare($query);
 
 	$stmt->bindParam(':email', $email, PDO::PARAM_STR);
 	$stmt->bindParam(':senha', md5($senha), PDO::PARAM_STR);
 
-	$stmt->execute();
+	$rows = $stmt->execute();
 
 	$stmt->closeCursor();
+	if ($rows[1] != 0) {
+		session_start();
+		$_SESSION["emailUsuario"] = $email;
+	}
 
-	session_start();
-	$_SESSION["emailUsuario"] = $email;
-
-	header('Location: ./telas/home.html');
+	header('Location: ../index.php');
 } catch(PDOException $ex) {
 	echo "Error on validate: ".$ex->getMessage();
 }
