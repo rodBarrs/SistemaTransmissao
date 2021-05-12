@@ -35,7 +35,7 @@ try {
 			<!-- starts header -->
 			<header>	
 				<img src="../assets/logo.png" alt="logo" />
-				<a href="../new-film/new-film.html">Criar Filme</a>
+				<a href="../new-film/new_film.html">Criar Filme</a>
 			</header>
 			<!-- end of header -->
 
