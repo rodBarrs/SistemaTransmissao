@@ -5,7 +5,7 @@ $idUsuario = $_POST["user_id"];
 
 $query = "CALL excluirUsuario(:idUsuario)";
 
-$stmt = $conexao->prepare($sql);
+$stmt = $conexao->prepare($query);
 
 $stmt->bindParam(':idUsuario', $idUsuario, PDO::PARAM_INT);
 

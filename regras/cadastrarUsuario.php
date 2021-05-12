@@ -7,7 +7,7 @@ $senha = $_POST["password"];
 
 $query = "CALL cadastrarUsuario(:nome, :email, :senha)";
 
-$stmt = $conexao->prepare($sql);
+$stmt = $conexao->prepare($query);
 
 $stmt->bindParam(':nome', $nome, PDO::PARAM_STR, 100);
 $stmt->bindParam(':email', $email, PDO::PARAM_STR, 100);
