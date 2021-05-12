@@ -1,11 +1,12 @@
 <?php 
 require_once '../conexao.php';
+session_start();
 
-$nome = $_POST['nome'];
-$descricao = $_POST['descricao'];
-$imagem = $_POST['imagem'];
-$url_filme = $_POST['url_filme'];
-$catalogo_idcatalogo = $_POST['catalogo_idcatalogo'];
+$nome = $_POST['name'];
+$descricao = $_POST['description'];
+$imagem = $_POST['image'];
+$url_filme = $_POST['url'];
+$catalogo_idcatalogo = $_SESSION["idCatalogo"];
 
 $query = "CALL cadastrarFilme(:nome, :descricao, :imagem, :url_filme, :catalogo_idcatalogo)";
 

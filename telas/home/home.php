@@ -35,7 +35,7 @@ try {
 			<!-- starts header -->
 			<header>	
 				<img src="../assets/logo.png" alt="logo" />
-				<a href="../login/login.html">Sair</a>
+				<a href="../new-film/new-film.html">Criar Filme</a>
 			</header>
 			<!-- end of header -->
 
@@ -45,23 +45,23 @@ try {
 				<ul>
 					<?php 
 					    foreach ($filmes as $filme) {
-				    	echo `
+				    	echo '
 					    <li>
-							<a href="`.$filme["url_filme"].`">						
+							<a href="'.$filme["url_filme"].'">						
 								<img src="https://cdn.shopify.com/s/files/1/0057/3728/3618/products/108b520c55e3c9760f77a06110d6a73b_e97cf224-d57f-44e3-8477-4f5479cd746b_480x.progressive.jpg?v=1573616089" alt="avengers">
 								<aside>
 								
 									<label>Nome:</label>
-									<strong class="title" >`.$filme["nome"].`</strong>
+									<strong class="title" >'.$filme["nome"].'</strong>
 									
 									<label>Descrição:</label>
 									<span class="description">
-										`.$filme["descricao"].`									
+										'.$filme["descricao"].'									
 									</span>
 
 								</aside>
 							</a>
-						</li>`;
+						</li>';
 					    }
 					?>
 					
