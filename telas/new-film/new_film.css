@@ -27,12 +27,7 @@ header img {
   height: 70%;
   margin-top: 5em;
 }
-@media (max-width: 760px) {
-  header img {
-    width: 50%;
-    height: 70%;
-  }
-}
+
 main {
   display: flex;
   align-items: center;
@@ -67,11 +62,7 @@ form .form-content {
 
   color: #fff;
 }
-@media (max-width: 760px) {
-  form .form-content {
-    width: 95%;
-  }
-}
+
 form .form-content label {
   margin-bottom: 0.5em;
 }
@@ -116,4 +107,28 @@ form .form-content .buttons a:hover {
 form .form-content .buttons button:hover {
   background: black;
   color: #fff;
+}
+
+@media (max-width: 860px) {
+  form .form-content {
+    width: 75%;
+  }
+}
+
+@media (max-width: 760px) {
+  header img {
+    width: 30%;
+    height: 70%;
+  }
+
+  form .form-content {
+    width: 95%;
+  }
+}
+
+@media (max-width: 560px) {
+  header img {
+    width: 40%;
+    height: 70%;
+  }
 }
