@@ -1,3 +1,3 @@
 <?php 
-header('Location: ./telas/login.php');
+header('Location: ./telas/login.html');
 ?>

@@ -1,14 +1,19 @@
 <?php 
 require_once './conexao.php';
 
-public function cadastrarUsuario($nome, $senha)
-{
-	$query = "CALL cadastrarUsuario(:nome, :senha)";
+$nome = $_POST["name"];
+$email = $_POST["email"];
+$senha = $_POST["password"];
 
-    $stmt = $pdo->prepare($sql);
+$query = "CALL cadastrarUsuario(:nome, :email, :senha)";
 
-    $stmt->bindParam(':nome', $nome, PDO::PARAM_STR, 100);
-    $stmt->bindParam(':senha', $senha, PDO::PARAM_STR, 100);
-}
+$stmt = $pdo->prepare($sql);
 
+$stmt->bindParam(':nome', $nome, PDO::PARAM_STR, 100);
+$stmt->bindParam(':email', $email, PDO::PARAM_STR, 100);
+$stmt->bindParam(':senha', md5($senha), PDO::PARAM_STR, 100);
+
+$stmt->execute();
+
+$stmt->closeCursor();
 ?>
