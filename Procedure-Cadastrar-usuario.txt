@@ -1,0 +1,50 @@
+DELIMITER //
+CREATE PROCEDURE `cadastrarUsuario`(nome varchar(100), email varchar(100),senha varchar(100))
+BEGIN
+insert into usuario (nome, email, senha)
+values (nome, email, senha);
+END //
+DELIMITER ;
+
+
+Cadatro Filmes:
+DELIMITER //
+CREATE PROCEDURE `cadastrarFilme`(nome varchar(100), descricao text, imagem varchar(100), url_filme varchar(200), catalogo_idcatalogo int)
+BEGIN
+insert into filme (nome, descricao, imagem, url_filme, catalogo_idcatalogo)
+values (nome, descricao, imagem, url_filme, catalogo_idcatalogo);
+END //
+DELIMITER ;
+
+Deletar Filme:
+DELIMITER //
+CREATE PROCEDURE `excluirFilme`(idfilme int)
+BEGIN
+
+delete from filme where filme.idfilme = idfilme;
+
+END //
+DELIMITER ;
+
+Editar Filme:
+DELIMITER //
+CREATE PROCEDURE `editarFilme`(nome varchar(100), descricao text, imagem varchar(100), url_filme varchar(200), idfilme int)
+BEGIN
+
+update filme 
+set filme.nome = nome, filme.descricao = descricao, filme.imagem = imagem, filme.url_filme = url_filme
+where filme.idfilme = idfilme;
+
+END //
+DELIMITER ;
+
+
+
+
+CREATE FUNCTION `validarUsuario`(email varchar(100), senha varchar (100)) RETURNS int
+BEGIN
+
+return ifnull((SELECT usuario.idusuario from usuario
+where usuario.email = email and usuario.senha = senha), 0);
+
+END
