@@ -17,4 +17,6 @@ $stmt->bindParam(':senha', $senha, PDO::PARAM_STR, 100);
 $stmt->execute();
 
 $stmt->closeCursor();
+
+header('Location: ./telas/login.html');
 ?>
