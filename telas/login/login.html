@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./assets/icons/video.svg" type="image/svg" />
-    <link rel="stylesheet" href="./styles/login.css" />
+    <link rel="stylesheet" href="./login.css" />
   
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
@@ -15,23 +15,25 @@
 		<div class="container">
 			<!-- starts header -->
 			<header>	
-				<img src="./assets/logo.png" alt="logo" />
+				<img src="../assets/logo.png" alt="logo" />
 			</header>
 			<!-- end of header -->
 	
 			<main><!-- starts main -->
 
-				<form name="login" action="../regras/cadastrarFilme.php" method="post">
+				<form name="login" action="../../regras/cadastrarFilme.php" method="post">
 					<div class="form-content">
 						<label for="email">E-mail:</label>
-						<input 
+						<input
+							required 
 							name="email"
 							type="text" 
 							placeholder="E-mail"
 						>
 					
 						<label for="password">Senha:</label>
-						<input 					
+						<input
+						 required 					
 							name="password"
 							type="password" 
 							placeholder="Senha"
@@ -42,7 +44,7 @@
 								Entrar
 							</button>
 							
-							<a href="register.html">
+							<a href="../register/register.html">
 								Não tenho conta
 							</a>
 						</div>
