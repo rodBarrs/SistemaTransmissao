@@ -18,6 +18,13 @@
   );
 }
 
+h1 {
+  margin-left: 0.3em;
+  color: #fff;
+  font-weight: normal;
+  font-size: 1.5em;
+}
+
 header {
   height: 5em;
   width: 100%;
@@ -25,6 +32,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  margin-bottom: 3em;
 }
 
 header img {
@@ -72,16 +81,23 @@ main li a aside {
   color: #fff;
 }
 
+main li a aside label {
+  margin: 0 0 0.3em 1.2em;
+}
+
+main li a aside label:nth-child(3) {
+  margin-top: 1.5em;
+}
+
 main li a aside .title {
-  margin-top: 1em;
   margin-left: 0.7em;
   font-size: 1.5em;
 }
 
 main li a aside .description {
-  margin-top: 1em;
   margin-left: 1em;
   font-size: 1.2em;
+  font-weight: normal;
 }
 
 @media (max-width: 760px) {
@@ -96,5 +112,14 @@ main li a aside .description {
   main li a img {
     width: 50%;
     height: 70%;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 1.3em;
+  }
+
+  main li a aside label:nth-child(1) {
+    margin-top: 1.5em;
   }
 }
