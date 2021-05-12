@@ -20,6 +20,18 @@ try {
 	session_start();
 	if ($result[0] != 0) {
 		$_SESSION["emailUsuario"] = $email;
+		$_SESSION["idUsuario"] = $result[0];
+		$idusuario = $result[0];
+
+		$query = "SELECT catalogo.idcatalogo from catalogo WHERE catalogo.usuario_idusuario = :idusuario";
+
+		$stmt = $conexao->prepare($query);
+
+		$stmt->bindParam(':idusuario', $idusuario, PDO::PARAM_INT);
+
+		$stmt->execute();
+		$result = $stmt->fetch();
+		$_SESSION["idCatalogo"] = $result[0];
 	} else {
 		session_unset();
 	}
