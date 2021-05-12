@@ -1,10 +1,10 @@
 <?php
 
 define('HOST', 'localhost');
-define('USER', 'root');
-define('PASSWORD', 'tuasenha');
+define('USER', 'user');
+define('PASSWORD', '899umCinco');
 define('DBNAME', 'transmissao');
-define('PORT', 3366);
+define('PORT', 3306);
 
 
 try {
