@@ -21,4 +21,6 @@ $stmt->bindParam(':idfilme', $idfilme, PDO::PARAM_INT);
 $stmt->execute();
 
 $stmt->closeCursor();
+
+header('Location: ../index.php');
 ?>
