@@ -3,7 +3,7 @@ $nome = $_GET['nome'];
 $descricao = $_GET['descricao'];
 $imagem = $_GET['imagem'];
 $url_filme = $_GET['url_filme'];
-$idfilme = $_GET['idfilme'];
+$idfilme = $_GET['id'];
  ?>
 <!DOCTYPE html>
 <html lang="en">
