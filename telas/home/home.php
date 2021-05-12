@@ -35,7 +35,7 @@ try {
 			<!-- starts header -->
 			<header>	
 				<img src="../assets/logo.png" alt="logo" />
-				<a href="../new-film/new_film.html">Criar Filme</a>
+				<a href="../new-film/new_film.html">Criar Filme</a><br/>
 				<a href="../../logout.php">Sair</a>
 			</header>
 			<!-- end of header -->
@@ -58,9 +58,9 @@ try {
 									<label>Descrição:</label>
 									<span class="description">
 										'.$filme["descricao"].'									
-									</span>
-									<a href="../../regras/excluirFilme.php?id='.$filme["idfilme"].'>Excluir</a>
-									<a href="../../regras/editarFilme.php?id='.$filme["idfilme"].'>Editar</a>
+									</span><br/><br/>
+									<a href="../../regras/excluirFilme.php?id='.$filme["idfilme"].'>Excluir</a><br/>
+									<a href="../../regras/editarFilme.php?id='.$filme["idfilme"].'>Editar</a><br/>
 								</aside>
 							</a>
 						</li>';
