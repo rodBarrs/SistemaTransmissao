@@ -36,6 +36,7 @@ try {
 			<header>	
 				<img src="../assets/logo.png" alt="logo" />
 				<a href="../new-film/new_film.html">Criar Filme</a>
+				<a href="../../logout.php">Sair</a>
 			</header>
 			<!-- end of header -->
 

@@ -15,7 +15,7 @@
 			<header>
 				<!-- starts header -->	
 				<img src="../assets/logo.png" alt="logo" />
-				<a href="../login/login.html">Sair</a>
+				<a href="../../logout.php">Sair</a>
 			</header>
 			<!-- end of header -->
 	
