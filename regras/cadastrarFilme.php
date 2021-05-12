@@ -20,4 +20,6 @@ $stmt->bindParam(':catalogo_idcatalogo', $catalogo_idcatalogo, PDO::PARAM_INT);
 $stmt->execute();
 
 $stmt->closeCursor();
+
+header('Location: ../index.php');
 ?>

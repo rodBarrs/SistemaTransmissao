@@ -4,22 +4,26 @@ require_once '../conexao.php';
 try {	
 	$email = $_POST["email"];
 	$senha = $_POST["password"];
+	$senha = md5($senha);
 
-	$query = "SELECT cadastrarUsuario(:email, :senha)";
+	$query = "SELECT validarUsuario(:email, :senha)";
 
 	$stmt = $conexao->prepare($query);
 
 	$stmt->bindParam(':email', $email, PDO::PARAM_STR);
-	$stmt->bindParam(':senha', md5($senha), PDO::PARAM_STR);
+	$stmt->bindParam(':senha', $senha, PDO::PARAM_STR);
 
 	$stmt->execute();
+	$result = $stmt->fetchAll();
 
 	$stmt->closeCursor();
+	print_r(count($result));
+	// if (count($result)) {
+	// 	session_start();
+	// 	$_SESSION["emailUsuario"] = $email;
+	// }
 
-	session_start();
-	$_SESSION["emailUsuario"] = $email;
-
-	header('Location: ./telas/home.html');
+	// header('Location: ../index.php');
 } catch(PDOException $ex) {
 	echo "Error on validate: ".$ex->getMessage();
 }
