@@ -16,6 +16,7 @@
 			<!-- starts header -->
 			<header>	
 				<img src="../assets/logo.png" alt="logo" />
+				<a href="../login/login.html">Sair</a>
 			</header>
 			<!-- end of header -->
 
