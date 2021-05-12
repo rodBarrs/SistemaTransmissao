@@ -36,7 +36,7 @@ header {
   margin-bottom: 3em;
 }
 
-header a {
+header a:nth-child(2) {
   text-decoration: none;
   position: fixed;
   right: 20px;
@@ -51,8 +51,27 @@ header a {
   justify-content: center;
 }
 
-header a:hover {
+header a:nth-child(2):hover {
   background: rgb(170, 0, 0);
+}
+
+header a:nth-child(4) {
+  text-decoration: none;
+  position: fixed;
+  right: 7em;
+  color: #fff;
+  width: 7%;
+  height: 5%;
+  border-radius: 10px;
+
+  transition: background 1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header a:nth-child(4):hover {
+  background: rgb(0, 3, 151);
 }
 
 header img {
