@@ -16,6 +16,9 @@ try {
 
 	$stmt->closeCursor();
 
+	session_start();
+	$_SESSION["emailUsuario"] = $email;
+
 	header('Location: ./telas/home.html');
 } catch(PDOException $ex) {
 	echo "Error on validate: ".$ex->getMessage();
