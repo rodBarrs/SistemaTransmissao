@@ -57,17 +57,16 @@ try {
 									
 									<label>Descrição:</label>
 									<span class="description">
-										'.$filme["descricao"].'			
-										<br/><br/>						
-										<a href="../../regras/excluirFilme.php?id='.$filme["idfilme"].'">Excluir</a><br/>
-										<a href="../edit-film/edit_film.php?
-											id='.$filme["idfilme"].'
-											&url_filme='.$filme["url_filme"].'
-											&imagem='.$filme["imagem"].'
-											&nome='.$filme["nome"].'
-											&descricao='.$filme["descricao"].'">Editar</a><br/>
+										'.$filme["descricao"].'									
 									</span><br/><br/>
 								</aside>
+								<a href="../../regras/excluirFilme.php?id='.$filme["idfilme"].'"><button>Excluir</button></a><br/>
+								<a href="../edit-film/edit_film.php?
+									id='.$filme["idfilme"].'
+									&url_filme='.$filme["url_filme"].'
+									&imagem='.$filme["imagem"].'
+									&nome='.$filme["nome"].'
+									&descricao='.$filme["descricao"].'"><button>Editar</button></a><br/>
 							</a>
 						</li>';
 					    }
