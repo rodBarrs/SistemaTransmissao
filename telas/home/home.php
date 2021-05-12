@@ -35,10 +35,10 @@ try {
 			<!-- starts header -->
 			<header>	
 				<img src="../assets/logo.png" alt="logo" />
-				<a href="../new-film/new_film.html">Criar Filme</a><br/>
 				<a href="../../logout.php">Sair</a>
 			</header>
 			<!-- end of header -->
+			<a href="../new-film/new_film.html">Criar Filme</a><br/>
 
 			<h1>Filmes disponíveis</h1>
 			<main><!-- starts main -->
@@ -59,9 +59,9 @@ try {
 									<span class="description">
 										'.$filme["descricao"].'									
 									</span><br/><br/>
-									<a href="../../regras/excluirFilme.php?id='.$filme["idfilme"].'>Excluir</a><br/>
-									<a href="../../regras/editarFilme.php?id='.$filme["idfilme"].'>Editar</a><br/>
 								</aside>
+								<a href="../../regras/excluirFilme.php?id='.$filme["idfilme"].'">Excluir</a><br/>
+								<a href="../../regras/editarFilme.php?id='.$filme["idfilme"].'"">Editar</a><br/>
 							</a>
 						</li>';
 					    }
