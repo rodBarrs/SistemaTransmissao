@@ -21,10 +21,10 @@ try {
 	session_start();
 	if ($result[0] != 0) {
 		$_SESSION["emailUsuario"] = $email;
+		header('Location: ../telas/home/home.html');
 	} else {
 		session_unset();
 	}
-
 	header('Location: ../index.php');
 } catch(PDOException $ex) {
 	echo "Error on validate: ".$ex->getMessage();
