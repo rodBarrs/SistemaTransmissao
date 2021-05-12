@@ -13,15 +13,17 @@ try {
 	$stmt->bindParam(':email', $email, PDO::PARAM_STR);
 	$stmt->bindParam(':senha', $senha, PDO::PARAM_STR);
 
-	$rows = $stmt->execute();
+	$stmt->execute();
+	$result = $stmt->fetchAll();
 
 	$stmt->closeCursor();
-	if ($rows[1] != 0) {
-		session_start();
-		$_SESSION["emailUsuario"] = $email;
-	}
+	print_r(count($result));
+	// if (count($result)) {
+	// 	session_start();
+	// 	$_SESSION["emailUsuario"] = $email;
+	// }
 
-	header('Location: ../index.php');
+	// header('Location: ../index.php');
 } catch(PDOException $ex) {
 	echo "Error on validate: ".$ex->getMessage();
 }
