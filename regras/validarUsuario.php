@@ -17,9 +17,12 @@ try {
 	$result = $stmt->fetch();
 
 	$stmt->closeCursor();
-	if ($result[0] != "0") {
-		session_start();
+
+	session_start();
+	if ($result[0] != 0) {
 		$_SESSION["emailUsuario"] = $email;
+	} else {
+		session_unset();
 	}
 
 	header('Location: ../index.php');
