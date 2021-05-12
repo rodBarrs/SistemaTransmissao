@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Courier New", Courier, monospace;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background: rgb(41, 0, 129);
+  background: linear-gradient(
+    90deg,
+    rgba(41, 0, 129, 1) 0%,
+    rgba(0, 0, 0, 1) 100%,
+    rgba(90, 69, 252, 1) 100%
+  );
+}
+header {
+  height: 5em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header a {
+  text-decoration: none;
+  position: fixed;
+  right: 20px;
+  color: #fff;
+  width: 5%;
+  height: 5%;
+  border-radius: 10px;
+
+  transition: background 1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header a:hover {
+  background: rgb(170, 0, 0);
+}
+
+header img {
+  width: 15%;
+  height: 70%;
+  margin-top: 5em;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 80%;
+}
+main form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin-top: 3em;
+}
+form .form-content {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 30%;
+  height: 100%;
+  padding: 1em;
+
+  color: #fff;
+}
+
+form .form-content label {
+  margin-bottom: 0.5em;
+}
+form .form-content input {
+  margin-bottom: 0.5em;
+  width: 100%;
+  height: 10%;
+  padding: 0.5em;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #fff;
+
+  color: #fff;
+}
+form .form-content label {
+  margin-top: 1em;
+}
+form .form-content .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 20%;
+}
+form .form-content .buttons button {
+  width: 40%;
+  height: 60%;
+  border: none;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  transition: all 1s;
+}
+form .form-content .buttons a {
+  text-decoration: none;
+  color: #fff;
+}
+form .form-content .buttons a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+form .form-content .buttons button:hover {
+  background: black;
+  color: #fff;
+}
+
+@media (max-width: 860px) {
+  form .form-content {
+    width: 75%;
+  }
+}
+
+@media (max-width: 760px) {
+  header img {
+    width: 30%;
+    height: 70%;
+  }
+
+  form .form-content {
+    width: 95%;
+  }
+}
+
+@media (max-width: 560px) {
+  header img {
+    width: 40%;
+    height: 70%;
+  }
+}

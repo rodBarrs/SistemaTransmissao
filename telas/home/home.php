@@ -62,6 +62,7 @@ try {
 										'.$filme["descricao"].'									
 									</span>
 									<a href="../../regras/excluirFilme.php?id='.$filme["idfilme"].'>Excluir</a>
+									<a href="../../regras/editarFilme.php?id='.$filme["idfilme"].'>Editar</a>
 								</aside>
 							</a>
 						</li>';

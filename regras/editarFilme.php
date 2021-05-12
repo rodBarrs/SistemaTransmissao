@@ -5,7 +5,7 @@ $nome = $_POST['nome'];
 $descricao = $_POST['descricao'];
 $imagem = $_POST['imagem'];
 $url_filme = $_POST['url_filme'];
-$idfilme = $_POST['idfilme'];
+$idfilme = $_GET['idfilme'];
 
 $query = "CALL cadastrarFilme(:nome, :descricao, :imagem, :url_filme, :idfilme)";
 
