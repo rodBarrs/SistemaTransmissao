@@ -51,7 +51,7 @@ try {
 				    	echo '
 					    <li>
 							<a href="'.$filme["url_filme"].'">						
-								<img src="https://cdn.shopify.com/s/files/1/0057/3728/3618/products/108b520c55e3c9760f77a06110d6a73b_e97cf224-d57f-44e3-8477-4f5479cd746b_480x.progressive.jpg?v=1573616089" alt="avengers">
+								<img src="'.$filme["imagem"].'">
 								<aside>
 								
 									<label>Nome:</label>
@@ -61,7 +61,7 @@ try {
 									<span class="description">
 										'.$filme["descricao"].'									
 									</span>
-
+									<a href="../../regras/excluirFilme.php?id='.$filme["idfilme"].'>Excluir</a>
 								</aside>
 							</a>
 						</li>';
