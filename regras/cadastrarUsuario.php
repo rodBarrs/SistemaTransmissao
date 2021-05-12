@@ -7,8 +7,6 @@ $senha = $_POST["password"];
 $senha = md5($senha);
 
 $query = 'CALL cadastrarUsuario(:nome, :email, :senha)';
-// $query = "insert into usuario (nome, email, senha)
-// values ('nome', 'email', 'senha');";
 
 $stmt = $conexao->prepare($query);
 

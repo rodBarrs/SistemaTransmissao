@@ -1,7 +1,7 @@
 <?php 
 require_once '../conexao.php';
 
-$idUsuario = $_POST["user_id"];
+$idUsuario = $_GET["id"];
 
 $query = "CALL excluirUsuario(:idUsuario)";
 
@@ -12,4 +12,6 @@ $stmt->bindParam(':idUsuario', $idUsuario, PDO::PARAM_INT);
 $stmt->execute();
 
 $stmt->closeCursor();
+
+header('Location: ../telas/home.html');
 ?>
