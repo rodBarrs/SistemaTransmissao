@@ -1,3 +1,10 @@
+<?php 
+$nome = $_GET['nome'];
+$descricao = $_GET['descricao'];
+$imagem = $_GET['imagem'];
+$url_filme = $_GET['url_filme'];
+$idfilme = $_GET['idfilme'];
+ ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,6 +33,7 @@
 
 						<label for="name">Nome do filme:</label>
 						<input
+							value="<?php echo $_GET['nome']; ?>"
 							required
 							name="name"
 							type="text" 
@@ -34,6 +42,7 @@
 
 						<label for="description">Descrição:</label>
 						<input
+							value="<?php echo $_GET['descricao']; ?>"
 							required
 							name="description"
 							type="text" 
@@ -42,6 +51,7 @@
 
 						<label for="image">Imagem:</label>
 						<input
+							value="<?php echo $_GET['imagem']; ?>"
 							required
 							name="image"
 				
@@ -49,6 +59,7 @@
 
 						 <label for="url">URL:</label>
 							<input
+							value="<?php echo $_GET['url_filme']; ?>"
 								required					
 								name="url"
 								type="text" 
@@ -57,7 +68,7 @@
 						
 						<div class="buttons">
 							<button type="submit">
-								Cadastrar filme
+								Salvar
 							</button>		
 							
 							<a href="../login/login.html">

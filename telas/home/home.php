@@ -61,7 +61,12 @@ try {
 									</span><br/><br/>
 								</aside>
 								<a href="../../regras/excluirFilme.php?id='.$filme["idfilme"].'">Excluir</a><br/>
-								<a href="../../regras/editarFilme.php?id='.$filme["idfilme"].'"">Editar</a><br/>
+								<a href="../../regras/editarFilme.php?
+									id='.$filme["idfilme"].'
+									&url_filme='.$filme["url_filme"].'
+									&imagem='.$filme["imagem"].'
+									&nome='.$filme["nome"].'
+									&descricao='.$filme["descricao"].'">Editar</a><br/>
 							</a>
 						</li>';
 					    }
