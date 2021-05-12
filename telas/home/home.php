@@ -44,8 +44,8 @@ try {
 
 				<ul>
 					<?php 
-					    while($filme = $filmes) {
-					        print_r($filme);
+					    foreach ($filme as $filmes) {
+					    	print_r($filme);
 					    }
 					?>
 					<li>
