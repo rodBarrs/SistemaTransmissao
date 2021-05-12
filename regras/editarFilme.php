@@ -1,11 +1,12 @@
 <?php 
 require_once '../conexao.php';
 
-$nome = $_POST['nome'];
-$descricao = $_POST['descricao'];
-$imagem = $_POST['imagem'];
-$url_filme = $_POST['url_filme'];
-$idfilme = $_GET['idfilme'];
+$nome = $_POST['name'];
+$descricao = $_POST['description'];
+$imagem = $_POST['image'];
+$url_filme = $_POST['url'];
+$idfilme = $_GET['id'];
+
 
 $query = "CALL editarFilme(:nome, :descricao, :imagem, :url_filme, :idfilme)";
 
