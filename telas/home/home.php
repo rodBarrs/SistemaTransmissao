@@ -36,6 +36,9 @@ try {
 			<header>	
 				<img src="../assets/logo.png" alt="logo" />
 				<a href="../new-film/new_film.html">Criar Filme</a>
+				<a>
+					<?php $_SESSION["emailUsuario"] ?>
+				</a>
 			</header>
 			<!-- end of header -->
 

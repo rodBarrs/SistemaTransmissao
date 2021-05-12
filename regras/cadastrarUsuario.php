@@ -17,9 +17,7 @@ $stmt->bindParam(':senha', $senha, PDO::PARAM_STR);
 $stmt->execute();
 
 $stmt->closeCursor();
-
 session_start();
-$_SESSION["emailUsuario"] = $email;
-
+session_unset();
 header('Location: ../index.php');
 ?>
