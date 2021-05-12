@@ -17,7 +17,7 @@ try {
 	$result = $stmt->fetch();
 
 	$stmt->closeCursor();
-	if ($result[0] != 0) {
+	if ($result[0] != "0") {
 		session_start();
 		$_SESSION["emailUsuario"] = $email;
 	}
