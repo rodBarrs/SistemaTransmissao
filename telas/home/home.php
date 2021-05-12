@@ -61,7 +61,7 @@ try {
 									</span><br/><br/>
 								</aside>
 								<a href="../../regras/excluirFilme.php?id='.$filme["idfilme"].'">Excluir</a><br/>
-								<a href="../../regras/editarFilme.php?
+								<a href="../telas/edit-film/edit_film.php?
 									id='.$filme["idfilme"].'
 									&url_filme='.$filme["url_filme"].'
 									&imagem='.$filme["imagem"].'
