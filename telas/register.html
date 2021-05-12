@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./assets/icons/video.svg" type="image/svg" />
-    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/register.css" />
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
     <title>Cine Conselho | Cadastro</title>
@@ -20,8 +20,16 @@
 	
 			<main><!-- starts main -->
 
-				<form action="" method="post">
+				<form name="register" action="../regras/cadastrarUsuario.php" method="post">
 					<div class="form-content">
+
+						<label for="name">Nome:</label>
+						<input 
+							name="name"
+							type="text" 
+							placeholder="Digite seu nome"
+						>
+
 						<label for="email">E-mail:</label>
 						<input 
 							name="email"
