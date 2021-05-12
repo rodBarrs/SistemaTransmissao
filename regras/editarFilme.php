@@ -9,7 +9,7 @@ $idfilme = $_POST['idfilme'];
 
 $query = "CALL cadastrarFilme(:nome, :descricao, :imagem, :url_filme, :idfilme)";
 
-$stmt = $pdo->prepare($sql);
+$stmt = $conexao->prepare($sql);
 
 $stmt->bindParam(':nome', $nome, PDO::PARAM_STR);
 $stmt->bindParam(':descricao', $descricao, PDO::PARAM_STR);
