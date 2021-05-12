@@ -4,6 +4,7 @@ define('HOST', 'localhost');
 define('USER', 'root');
 define('PASSWORD', 'tuasenha');
 define('DBNAME', 'transmissao');
+define('PORT', 3366);
 
 
 try {

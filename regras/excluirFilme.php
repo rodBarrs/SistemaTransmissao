@@ -1,5 +1,5 @@
 <?php 
-require_once './conexao.php';
+require_once '../conexao.php';
 
 $idUsuario = $_POST["user_id"];
 
