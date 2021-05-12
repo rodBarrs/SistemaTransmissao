@@ -6,7 +6,9 @@ $email = $_POST["email"];
 $senha = $_POST["password"];
 $senha = md5($senha);
 
-$query = "CALL cadastrarUsuario(:nome, :email, :senha)";
+// $query = "CALL cadastrarUsuario(:nome, :email, :senha)";
+$query = "insert into usuario (nome, email, senha)
+values ('nome', 'email', 'senha');";
 
 $stmt = $conexao->prepare($query);
 
@@ -18,5 +20,5 @@ $stmt->execute();
 
 $stmt->closeCursor();
 
-header('Location: ./telas/login.html');
+header('Location: ../telas/login.html');
 ?>
