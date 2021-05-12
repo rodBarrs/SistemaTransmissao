@@ -35,10 +35,10 @@ try {
 			<!-- starts header -->
 			<header>	
 				<img src="../assets/logo.png" alt="logo" />
-				<a href="../../logout.php">Sair</a>
+				<a href="../../logout.php">Sair</a><br/>
+				<a href="../new-film/new_film.html">Criar Filme</a>
 			</header>
 			<!-- end of header -->
-			<a href="../new-film/new_film.html">Criar Filme</a><br/>
 
 			<h1>Filmes disponíveis</h1>
 			<main><!-- starts main -->

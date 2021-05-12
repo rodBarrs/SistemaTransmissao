@@ -7,7 +7,7 @@ $imagem = $_POST['imagem'];
 $url_filme = $_POST['url_filme'];
 $idfilme = $_GET['idfilme'];
 
-$query = "CALL cadastrarFilme(:nome, :descricao, :imagem, :url_filme, :idfilme)";
+$query = "CALL editarFilme(:nome, :descricao, :imagem, :url_filme, :idfilme)";
 
 $stmt = $conexao->prepare($query);
 

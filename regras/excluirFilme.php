@@ -3,7 +3,7 @@ require_once '../conexao.php';
 
 $idUsuario = $_GET["id"];
 
-$query = "CALL excluirUsuario(:idUsuario)";
+$query = "CALL excluirFilme(:idUsuario)";
 
 $stmt = $conexao->prepare($query);
 
